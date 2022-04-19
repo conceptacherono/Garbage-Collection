@@ -1,0 +1,17 @@
+{% extends 'all-garbage/base.html' %}
+{% load bootstrap4 %}
+{% load crispy_forms_tags %}
+{% load static %}
+{% block content %}
+{{block.content}}
+<div class="container-fluid">
+
+  <form  action="{%url 'events'%}" method="post">
+    {%csrf_token%}
+
+    {{ attendForm |crispy }}
+    <input type="submit" value="Join Us">
+  </form>
+
+</div>
+{% endblock %}

@@ -1,24 +1,4 @@
-<style>
-.nav a{
-text-decoration: none;
-color: green;
-font-size: 18px;
-padding-left: 30px;
-padding-top: 10px;
-display: inline-block;
-transition: all 0.5s ease 0s;
-}
-.nav{
-   height: 50px;
-    margin-top: 5px;
-    
-}
-header{
-  overflow: hidden;
-  background-color: rgb(168, 163, 163);
 
-}
-</style>
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
 <header class="site-header">
@@ -26,9 +6,9 @@ header{
     <nav class="nav">
       <div class="logo"></div>
       <div id="logo"></div>
-        <a href="#">Home</a>
+        <a href="{% url 'home' %}">Home</a>
         <a href="#">Services</a>
-        <a href="#">Events</a>
+        <a href=" {% url 'events' %} ">Events</a>
         <a href="#">Collect</a>
         <a class="btn btn-sm" id="btn" href="#">Signup</a>
     </nav>

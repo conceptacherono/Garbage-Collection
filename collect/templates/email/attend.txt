@@ -1,0 +1,2 @@
+Hello {{name}}
+Thankyou for showing interest in garbage collection. Our event will be communicated as soon as possible
