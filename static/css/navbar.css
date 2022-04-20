@@ -1,7 +1,6 @@
-
 .nav a{
 text-decoration: none;
-color: green;
+color:white;
 font-size: 18px;
 padding-left: 30px;
 padding-top: 10px;
@@ -20,9 +19,12 @@ a{
   border-radius: 40px;
   text-align: center;
   padding: 5px;
+  padding-bottom: 5px;
   width: 80px;
 }
-
+#btn a{
+  margin-bottom: 5px;
+}
 .nav{
    height: 50px;
     margin-top: 5px;

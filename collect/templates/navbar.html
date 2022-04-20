@@ -1,4 +1,3 @@
-
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/navbar.css' %}">
 <header class="site-header">
@@ -7,10 +6,10 @@
       <div class="logo"></div>
       <div id="logo"></div>
         <a href="{% url 'home' %}">Home</a>
-        <a href="#">Services</a>
+        <a href="{%url 'service'%}">Services</a>
         <a href=" {% url 'events' %} ">Events</a>
-        <a href="#">Collect</a>
-        <a class="btn btn-sm" id="btn" href="#">Signup</a>
+        <a href="{%url 'post' %}">Collect</a>
+        <a class="btn btn-sm" id="btn" href="{% url 'register' %}">Signup</a>
     </nav>
   </div>
 </header>

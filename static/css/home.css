@@ -32,7 +32,8 @@
     .footer{
         height: 30px;
         text-align: center;
-        background-color: rgb(168, 163, 163);
+        background-color:rgb(14, 23, 151);
         margin-top: 10px;
+        color: white;
         margin-bottom: 10px;
     }

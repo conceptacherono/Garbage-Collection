@@ -1,4 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa%7CPatua+One');
 body{
     background-repeat: no-repeat;
     background-size: cover;
+     font-family: 'Patua One', serif;
+}
+.footer{
+    color: white;
+     background-color: rgb(14, 23, 151);
 }

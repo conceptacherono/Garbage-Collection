@@ -1,0 +1,41 @@
+{%extends 'all-garbage/base.html'%} {% block content %}
+<!-- Looping through category  -->
+<style>
+.row{
+    display: inline-flex;
+    margin: 30px;
+    
+}
+.card img{
+width: 270px;
+height: 200px;
+border-radius: 10px;
+box-shadow: 0 2px 20px green
+}
+</style>
+<h3 class="text-center">Collected garbage</h3>
+<p>We can also get you paid by just Uploading a picture on you collecting garbage
+    Upload your picture<a href="{% url 'new-post' %}"class="open-project">Here </a>and get your credit 
+</p>
+{% for i in posts %}
+<div class="row">
+        <div class="card">
+            <a href="post/{{i.id }}/" class="open"></a>
+                <img class="card-img" src="{{i.photo.url}}" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{i.title}}</h5>
+                <p class="card-text">{{i.description}}</p>
+                <a href="{% url 'view_project' i.id%}" class="open-project">
+                    <button class="btn btn-primary">Get Paid</button></a>
+            </div>
+    </div>
+</div>
+{% endfor %} 
+<footer class="masthead clear">
+    <p class="text-center "> Copyright &copy; 2022 .All rights reserved. </p>
+    <!-- .site-title -->
+    <!-- .centered -->
+</footer>
+
+
+{% endblock %}
