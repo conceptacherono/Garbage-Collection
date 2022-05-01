@@ -2,9 +2,10 @@
 body{
     background-repeat: no-repeat;
     background-size: cover;
-     font-family: 'Patua One', serif;
+    font-family: 'Patua One', serif;
+    background-color: rgba(55, 235, 10, 0.3);
 }
 .footer{
     color: white;
-     background-color: rgb(14, 23, 151);
+    background-color: rgb(14, 23, 151);
 }

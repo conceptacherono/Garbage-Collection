@@ -12,19 +12,65 @@
 
 </head>
 <style>
+    @import url('https://fonts.googleapis.com/css?family=Comfortaa%7CPatua+One');
     
+    .container{
+        display: flex;
+        
+    }
+    .card{
+        width: 350px;
+        margin-left: 200px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 20px green
+    }
+    .card-header img{
+        height: 200px;
+        width: 300px;
+    }
+    h6{
+        font-family: 'Patua One', serif;
+        text-align: center;
+    }
+    .des p{
+        width: 300px;
+        margin-top: 30px;
+        border-radius: 10px;
+        box-shadow: 0 2px 20px green
+    }
+
 </style>
 <body>
+     <h6>Get Paid by making your Environment Clean</h6>
+     <div class="container">
+     <div class="des">
+         <p>
+             Our platform not only Make your environment clean but also it makes sure that you get rewarded for participating in 
+             garbage collection.
+             to get paid upload a picture of you and your team doing the garbage collectiion and upload it in the form.
+             Remeber a clean environment is a healthy Living.
+             <b>Title:</b>descripes either organic or inorganic waste
+         </p>
 
+     </div>
+    <div class="card">
+        <div class="card-header">
+            <img src="/static/images/garbage3.jpg" alt="" srcset="">
+        </div>
+    <div class="card-body">
     <form action="{%url 'new-post' %}" method="post" enctype="multipart/form-data">
         {%csrf_token%} {{form|crispy}}
 
-        <input type="submit" class="btn btn-success btn-lg" value="Post">
+        <input type="submit" class="btn btn-success btn-sm" value="Post">
     </form>
-
+    </div>
+    </div>
     {% block scripts %}
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     {% bootstrap_javascript %} {% endblock %}
+    </div>
 
 </body>
 

@@ -4,7 +4,7 @@
 .row{
     display: inline-flex;
     margin: 30px;
-    
+   
 }
 .card img{
 width: 270px;
@@ -25,17 +25,13 @@ box-shadow: 0 2px 20px green
             <div class="card-body">
                 <h5 class="card-title">{{i.title}}</h5>
                 <p class="card-text">{{i.description}}</p>
-                <a href="{% url 'view_project' i.id%}" class="open-project">
-                    <button class="btn btn-primary">Get Paid</button></a>
+                <a href="{% url 'view_project' i.id%}" class="btn btn-primary">Get paid</a>
             </div>
     </div>
 </div>
 {% endfor %} 
 <footer class="masthead clear">
-    <p class="text-center "> Copyright &copy; 2022 .All rights reserved. </p>
-    <!-- .site-title -->
-    <!-- .centered -->
-</footer>
-
-
+ <div class="footer" style="text-align: center; color: white;">
+    <p>Copyrights &copy;2022 All rights reserved</p>
+</div>
 {% endblock %}

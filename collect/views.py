@@ -82,7 +82,7 @@ def new_post(request):
             article = form.save(commit=False)
             article.user = current_user
             article.save()
-        return redirect('home')
+        return redirect('post')
     else:
         form = postProjectForm()
     return render(request, 'all-garbage/new-post.html', {"form": form})

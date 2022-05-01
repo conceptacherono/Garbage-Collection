@@ -17,18 +17,15 @@ a{
   height: 30px;
   margin-top: 10px;
   border-radius: 40px;
-  text-align: center;
-  padding: 5px;
-  padding-bottom: 5px;
+  text-align: center; 
   width: 80px;
+
 }
-#btn a{
-  margin-bottom: 5px;
-}
+
 .nav{
    height: 50px;
-    margin-top: 5px;
-    
+  margin-top: 5px;
+
 }
 header{
   overflow: hidden;
@@ -43,6 +40,7 @@ header{
   width: 50px;
   border-radius: 50% 50%;
   margin-left: 40px;
+  margin-bottom: 5px;
 }
 #logo{
    border: 1px solid green;

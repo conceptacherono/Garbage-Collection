@@ -40,6 +40,11 @@
         <li>
           {{attend.name}}: {{attend.email}} 
         </li>
+        {% if user.is_authenticated %}
+        <li> {{user.username}} :{{user.email}} </li>
+         {%else%}
+         <li> no user </li>
+         {% endif %}
         {% endfor %}
     </div>
 

@@ -1,11 +1,19 @@
 
 {% extends "registration/base.html"%}{% load bootstrap4 %} {% block content %}
 {% load crispy_forms_tags %}
+<style>
+    .container{
+        background-color: rgba(55, 235, 10, 0.3);
+    }
+    .card-body{
+        width: 300px;
+    }
+</style>
 <div class="container">
     <div class="row">
         <!-- Empty div -->
-        <div class="col-md-4"></div>
-        <div class="col-md-4">
+        
+        <div class="reg">
             {% if register_form.errors %}
             <p> Some Information Might be Incorrect </p>
             {% endif %}
@@ -14,17 +22,18 @@
                     <h3 class="text-center">Sign Up</h3>
                 </div>
                 <div class="panel-body">
-                  <form method="POST" class="card-body">
+                  <form method="POST" class="card-body" style="width:34rem; border-radius: 20px; color: black; background-image: url(/static/images/garbage2\ 1\ \(1\).png);
+                    margin-left: 200px;">
                     {% csrf_token %}
                     {{ register_form|crispy }}
                     <button class="btn btn-primary" type="submit">register</button>
-                  </form>
                   <p class="text-center card-footer">Have an account? <a href="/login">login</a>.</p>
+                  </form>
                 </div>
             </div>
         </div>
         <!-- empty div -->
-        <div class="col-md-4"></div>
+        
     </div>
 </div>
 {% endblock %}

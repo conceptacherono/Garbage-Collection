@@ -6,60 +6,55 @@
 <style>
 *{
     box-sizing: border-box;
+    
 }
-
+.container h4{
+margin-top: 20px;
+text-align: center;
+margin-bottom: 20px;
+}
 .card{
     margin: 10px;
     border-radius: 10px;
-    box-shadow: 0 2px 20px green
+    box-shadow: 0 2px 20px green;
+    height: 500px;
    
 }
 .card-body img{
     object-fit: cover;
+    width: 230px;
 }
 .card-text{
     padding-left: 10px;
+    padding-top: 10px;
 }
 .card-header a{
-    margin-left: 150px;
+    margin-left: 60px;
     border-radius: 20px;
 }
 #srow h4{
     margin-top: 20px;
 }
 
-table{
-    margin-top: 40px;
-    font-family: Arial, Helvetica, sans-serif;
-    border-collapse: collapse;
-    width: 50%;
-}
-td,th{
-    border:  1px solid black;
-    text-align: left;
-    padding: 10px;
-}
-tr:nth-child(even){
-    background-color: #dddddd;
-}
+
 </style>
 <div class="container">
     <h4>Events Taking Place</h4>
     <div class="row">
         {% for event in events %}
-        <div class="card" style="width: 18rem; margin: 20px;" >
+        <div class="card" style="width: 18rem;" >
             <div class="card-header ">
                 {{event.name}}
                 <a class="btn btn-sm btn-primary" href="{% url 'attend'%}">joinUs</a>
             </div>
             <div class="card-body">
-                <img src="{{ event.image.url }}" alt="" srcset="" style="width: 200px; height: 200px;">
+                <img src="{{ event.image.url }}" alt="" srcset="" style="width: 250px; height: 200px;">
             </div>
             <div class="card-text">
                 {{event.description}}
             </div>
             <hr>
-            <div class="footer">
+            <div class="card-footer">
                <p>located in: <b>{{ event.location }}</b> </p>
             </div>
         </div>
@@ -67,5 +62,8 @@ tr:nth-child(even){
         {% endfor %}
     </div>
   
+</div>
+ <div class="footer" style="text-align: center; color: white;">
+    <p>Copyrights &copy;2022 All rights reserved</p>
 </div>
 {% endblock %}

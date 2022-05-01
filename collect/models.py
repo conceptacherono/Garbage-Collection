@@ -33,7 +33,7 @@ class EventsAttendants(models.Model):
         self.save()
 class Post(models.Model):
     title = models.CharField(max_length=155)
-    description = models.TextField(max_length=500, default="mygarbage", blank=True)
+    description = models.CharField(max_length=500, blank=True)
     photo = CloudinaryField('images', default='default.png')
 
 

@@ -1,7 +1,8 @@
 {%extends 'all-garbage/base.html'%} {% block content %}
 {% load static %}
 <!-- Looping through category  -->
-<link rel="stylesheet" href="{% static 'css/service.css' %}">
+<link rel="stylesheet" href="{%static 'css/service.css' %}">
+<body style="background-color: rgba(55, 235, 10, 0.3);">
 <div class="container-fluid">
     <header class="masthead clear">
         <div class="centered">
@@ -9,7 +10,7 @@
                 <h3 class="text-center"> Services</h3>
                 <p class="text-center">Every inch in your house can be well-maintained with the help of services we offer. Forget about any worries and select the service you need.</p>
             </div>
-            <!-- .site-title -->
+            <!--.site-title -->
         </div>
         <!-- .centered -->
     </header><br>
@@ -19,7 +20,7 @@
             <section class="cards">
                 <!-- .card -->
                 <article class="card ">
-                    <div class="card-body" style="width: 18rem;">
+                    <div class="card-body" style="width: 18rem; background-color: white; border-radius: 10px;margin-left: 10px;">
                         <h5 class="card-title">Garbage Trucks</h5> <img class="card-img-top" src="/static/images/tt7.jpeg" alt="Card image cap">
                         <p class="card-text">Every day we collect waste from hundreds of residential, commercial and industrial clients across the Nairobi Metropolitan area.</p>
                     </div>
@@ -27,7 +28,7 @@
                 </article>
                 <!-- .card -->
                 <article class="card">
-                    <div class="card-body" style="width: 18rem;">
+                    <div class="card-body" style="width: 18rem; background-color: white; border-radius: 10px;margin-left: 10px; ">
                         <h5 class="card-title">Sorting</h5> <img class="card-img-top" src="/static/images/sort .jpg" alt="Card image cap">
 
                         <p class="card-text">We sort waste into cardboard, paper, plastic containers & packaging, styrofoam, glass, metal, aluminum, shoes, textiles and many more fractions.</p>
@@ -36,7 +37,7 @@
                 </article>
                 <!-- .card -->
                 <article class="card ">
-                    <div class="card-body" style="width: 18rem;">
+                    <div class="card-body" style="width: 18rem; background-color: white; border-radius: 10px;margin-left: 10px;">
                         <h5 class="card-title">Recycling</h5> <img class="card-img-top" src="/static/images/t6.jpeg" alt="Card image cap">
 
                         <p class="card-text">We recycle plastic containers and packaging ourselves; we make compost from organic waste; and work with recycling partners for other materials.</p>
@@ -50,8 +51,9 @@
         </div>
         <!-- .centered -->
     </main>
-     <div class="footer">
+</div>
+</body>
+    <div class="footer" style="color: white; text-align: center;">
     <p>Copyrights &copy;2022 All rights reserved</p>
-</div>
-</div>
+   </div>
 {% endblock %}

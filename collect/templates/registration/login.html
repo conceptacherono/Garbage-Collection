@@ -3,8 +3,8 @@
 <div class="container">
   <div class="row">
     <!-- Empty div -->
-    <div class="col-md-4"></div>
-    <div class="col-md-4">
+    
+    <div class="login">
       {% if login_form.errors %}
       <p>Password or Username is incorrect</p>
       {% endif %}
@@ -13,18 +13,19 @@
           <h3 class="text-center">Sign In</h3>
         </div>
         <div class="panel-body">
-          <form method="POST" class="card-body">
+          <form method="POST" class="card-body" style="width:34rem; border-radius: 20px; color: black; background-image: url(/static/images/garbage2\ 1\ \(1\).png);
+                  margin-left: 200px;">
             {% csrf_token %} {{ login_form|crispy }}
-            <button class="btn btn-primary" type="submit">Login</button>
-          </form>
+            <button class="btn btn-primary" type="submit" style="margin: 20px;">Login</button>
           <p class="text-center card-footer">
             Don't have an account? <a href="/register">Create an account</a>.
           </p>
+          </form>
         </div>
       </div>
     </div>
     <!-- empty div -->
-    <div class="col-md-4"></div>
+   
   </div>
 </div>
 {% endblock %}

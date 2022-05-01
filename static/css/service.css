@@ -128,17 +128,6 @@ big {
     color: rgb(7, 7, 7);
 }
 
-.site-title {
-    color: rgb(7, 7, 7);
-}
-
-.sait-title {
-    background-color: rgba(55, 235, 10, 0.3);
-    color: rgb(7, 7, 7);
-    text-align: center;
-    margin-bottom: 1.5em;
-}
-
 img {
     display: block;
     border: 0;
@@ -147,8 +136,10 @@ img {
 }
 
 .card {
-    background: white;
+    border-radius: 20px;
+    box-shadow: 0 2px 20px green;
     margin-bottom: 2em;
+    margin-left:10px ;
 }
 .card-text{
     font-size: small;
@@ -181,12 +172,16 @@ img {
 
 .cards {
     display: flex;
-    justify-content: space-between;
+    margin: 20px;
 }
+
 .masthead{
     margin-top: 30px;
     color: white;
 }
 .masthead p{
+    color: white;
+}
+.footer{
     color: white;
 }

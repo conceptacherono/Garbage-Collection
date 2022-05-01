@@ -1,12 +1,26 @@
 {%extends 'all-garbage/base.html'%} {% load bootstrap4 %} {% block content %}
 {{block.super}}
 {% load crispy_forms_tags %}
+<style>
+    .footer{
+        margin-top: 200px;
+        text-align: center;
+    }
+ 
+    .card{
+        border-radius: 30px;
+        border: 1px slod black;
+        margin-right:50px ;
+        width: 18rem;
+        height: 300px;
+    }
+</style>
 <div class="container">
     <h5 class="text-center">Garbage Collection Details</h5>
     <div class="row">
         <div class="col-md-1">
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 card">
             <div class="panel panel-default" style="margin-top:5%">
                 <img class="card-img-top mb-10 img-responsive" src="{{project.image.url}}" style="height:auto;width:100%">
                 <div class="panel-body">
@@ -22,20 +36,20 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <h2 class="mt-4">Total amount awarded</h2>
+        <div class="col-md-3 card">
+            <h4 class="mt-4">Total amount awarded</h4>
             {% if rating_status %}
-            <h5>Thank you for helping us clean our environment!</h5>
+            <h5 class="card-body">Thank you for helping us clean our environment!</h5>
             {% else %}
             <form action="" method="post" enctype="multipart/form-data">
                 {% csrf_token %} {{form|crispy}}
-                <button class="btn btn-sm btn-info btn-block" style="margin-top:4px;" value="review" type="submit">Calculate</button>
+                <button class="btn btn-sm btn-info btn-block" style="margin-top:4px; margin-right: 100px;" value="review" type="submit">GetPaid</button>
             </form>
             {% endif %}
         </div>
         <div class="col-md-3">
             {% for reviews in reviews %} {% if project.id == reviews.project.id %}
-            <div class="card" style="width: 20rem;">
+            <div class="card">
                 <div class="card-body">
                     <h5 class="card-title text-center">Reward</h5>
                     <p class="card-text  text-center">Weight in Kg: {{reviews.weight}}</p>
@@ -47,8 +61,8 @@
         </div>
         <div class="col-md-1"></div>
     </div>
- <div class="footer">
-    <p>Copyrights &copy;2022 All rights reserved</p>
 </div>
+ <div class="footer" style="text-align: center; color: white;">
+    <p>Copyrights &copy;2022 All rights reserved</p>
 </div>
 {% endblock %}
